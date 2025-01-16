@@ -48,14 +48,12 @@ module.exports.run = async function({ api, event, Users }) {
   if (event.logMessageData.addedParticipants && Array.isArray(event.logMessageData.addedParticipants) && event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
     //api.changeNickname(`𝗕𝗢𝗧 ${(!global.config.BOTNAME) ? "Buddy" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
 
-    let gifUrl = 'https://i.postimg.cc/SNQXkB0y/lv-0-20231018174834.gif';
-let gifPath = __dirname + '/Nayan/join/join.gif';
+    let gifUrl = 'https://i.postimg.cc/wMqGrFrx/20250104-145026.jpg';
+let gifPath = __dirname + '/Nayan/join/farhan.jpg';
 
 axios.get(gifUrl, { responseType: 'arraybuffer' })
 .then(response => {
     fs.writeFileSync(gifPath, response.data);
-  if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
-    api.changeNickname(`[ ${global.config.PREFIX} ] • ➠${(!global.config.BOTNAME) ? "bot" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
     return api.sendMessage("চলে এসেছি আমি পিচ্চি শাহ আলম তোমাদের মাঝে🤭!", event.threadID, () => api.sendMessage({ body: `${global.config.BOTNAME} CONNECTED«\n\nAssalamualaykum☘️
 <------------------------------>  
 BOT CONNECTED SUCCESFUL !!! 
@@ -66,16 +64,12 @@ APPROVAL ALLOW IN THIS GROUP!!!
 <------------------------------>
 AND FOR ANY COMPLAINTS OR CONTACT BOT OPERATOR 
 
-DEVELOPER :Shaahlom 
+DEVELOPER : 𝐊𝐈𝐍𝐆  𝐒𝐇𝐀𝐀𝐇𝐋𝐎𝐌
 
-🟣Facebook Account Link: 
+🟣Facebook Account Link: https://www.facebook.com/profile.php?id=61556167296208&mibextid=ZbWKwL
 
-https://www.facebook.com/profile.php?id=61556167296208&mibextid=ZbWKwL
-
-🔵WHATSAPP NUMBER: 
-
-🟢SUPPORT EMAIL: `, attachment: fs.createReadStream(gifPath)}, threadID));
-  }})
+🔵WHATSAPP NUMBER: 01328091668`, attachment: fs.createReadStream(gifPath)}, threadID));
+})
 .catch(error => {
     console.error(error);
 });
@@ -106,11 +100,11 @@ https://www.facebook.com/profile.php?id=61556167296208&mibextid=ZbWKwL
         let avtAnime = (await axios.get(encodeURI(
           `https://graph.facebook.com/${event.logMessageData.addedParticipants[o].userFbId}/picture?height=720&width=720&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`), { responseType: "arraybuffer" })).data;
         var ok = [
-          'https://imgur.com/a/R8We2pI',
-          'https://imgur.com/a/R8We2pI',
-          'https://imgur.com/a/R8We2pI',
-          'https://imgur.com/a/R8We2pI',
-          'https://imgur.com/a/R8We2pI'
+          'https://imgur.com/a/IV0hJSN',
+          'https://imgur.com/a/IV0hJSN',
+          'https://imgur.com/a/IV0hJSN',
+          'https://imgur.com/a/IV0hJSN',
+          'https://imgur.com/a/IV0hJSN'
         ]
         let background = (await axios.get(encodeURI(`${ok[Math.floor(Math.random() * ok.length)]}`), { responseType: "arraybuffer", })).data;
         fs.writeFileSync(pathAva, Buffer.from(avtAnime, "utf-8"));
@@ -163,7 +157,27 @@ https://www.facebook.com/profile.php?id=61556167296208&mibextid=ZbWKwL
         abx.push(fs.createReadStream(__dirname + `/Nayan/join/${o}.png`))
       }
       memLength.sort((a, b) => a - b);
-      (typeof threadData.customJoin == "undefined") ? msg = `Hello {name}\nWelcome to {threadName}\nyou're the {soThanhVien}th member on this group please enjoy"\n─────────────────\n[ {time} - {thu} ]` : msg = threadData.customJoin;
+      (typeof threadData.customJoin == "undefined") ? msg = `‎╔════•|      ✿      |•════╗
+ 💐আ্ঁস্ঁসা্ঁলা্ঁমু্ঁ💚আ্ঁলা্ঁই্ঁকু্ঁম্ঁ💐
+╚════•|      ✿      |•════╝
+
+    ✨🆆🅴🅻🅻 🅲🅾🅼🅴✨
+
+                 ❥𝐍𝐄𝐖~
+
+        ~🇲‌🇪‌🇲‌🇧‌🇪‌🇷‌~ {name}\༄✺আ্ঁপ্ঁনা্ঁকে্ঁ আ্ঁমা্ঁদে্ঁর্ঁ✺࿐ {threadName}🥰🖤🌸—এ্ঁর্ঁ প্ঁক্ষ্ঁ🍀থে্ঁকে্ঁ🍀—🌸🥀
+
+         🥀_ভা্ঁলো্ঁবা্ঁসা্ঁ_অ্ঁভি্ঁরা্ঁম্ঁ_🥀
+         
+ \༄✺আঁপঁনিঁ এঁইঁ গ্রুঁপেঁর {soThanhVien} নঁং মে্ঁম্বা্ঁরঁ ࿐
+
+    ╔╦══•    •✠•❀•✠ •   •══╦╗
+        ♥    𝐂𝐄𝐎    ♥
+
+                           ☟                     
+
+      ♥𝐊𝐈𝐍𝐆 𝐒𝐇𝐀𝐀𝐇𝐋𝐎𝐌(✷‿✷)♥
+    ╚╩══•" "\n─────────────────\n[ {time} - {thu} ]` : msg = threadData.customJoin;
       var nameAuthor = await Users.getNameUser(event.author)
       msg = msg
         .replace(/\{iduser}/g, iduser.join(', '))
